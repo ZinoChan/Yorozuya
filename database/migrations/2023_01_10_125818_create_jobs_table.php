@@ -22,6 +22,10 @@ return new class extends Migration
             $table->string('location');
             $table->string('website');
             $table->longText('description');
+            $table->longText('expertise');
+            $table->longText('expertiseTags');
+            $table->longText('role');
+            $table->longText('roleTags');
         });
     }
 
