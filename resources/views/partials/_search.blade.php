@@ -16,7 +16,7 @@
             <span class="text-indigo-500 text-lg">
                 <i class="fa-solid fa-location-dot"></i>
             </span>
-            <select name='location' class="text-neutral-500 focus:outline-none text-sm  block px-4 py-6 bg-white max-w-lg">
+            <select class="text-neutral-500 focus:outline-none text-sm  block px-4 py-6 bg-white max-w-lg">
                 <option selected>Choose a location</option>
                 <option value="US"> United State </option>
                 <option value="CA">Canada</option>
