@@ -6,8 +6,7 @@
             <div class="absolute inset-y-0 left-0 text-indigo-500 text-lg flex items-center pl-3 pointer-events-none">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <input type="search"
-            name="search" 
+            <input type="search" name="search"
                 class="block w-full p-6 pl-10 focus:outline-none text-sm text-gray-800 bg-white placeholder-neutral-500 dark:placeholder-neutral-400 dark:text-white"
                 placeholder="Search Mockups, Logos...">
 
