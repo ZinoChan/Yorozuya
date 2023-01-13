@@ -14,6 +14,10 @@
                      </div>
                  </label>
                  <span class="text-white text-lg"><i class="fa-solid fa-moon"></i></span>
+                 <button type="button"
+                     class="text-white bg-white text-indigo-500 hover:bg-gray-100 font-bold rounded-md px-6 py-2.5 focus:outline-none">
+                     <a href="/jobs/create">create a job</a>
+                 </button>
              </div>
          </div>
      </nav>
