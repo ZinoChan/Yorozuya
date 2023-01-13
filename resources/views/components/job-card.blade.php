@@ -1,6 +1,6 @@
 @props(['job'])
 <div class="rounded bg-white relative py-10 px-6">
-    <div class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-12 h-12 -top-6 left-10 bg-pink-500">
+    <div class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-16 h-16 -top-8 left-6 bg-pink-500">
         {{$job->company}}
     </div>
     <div class="mb-6">
