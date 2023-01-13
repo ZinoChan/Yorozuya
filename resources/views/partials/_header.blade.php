@@ -3,7 +3,6 @@
      <nav class=" py-8">
          <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
              <a href="/" class="flex items-center">
-
                  <span class="self-center text-3xl uppercase font-semibold whitespace-nowrap text-white">Yorozuya</span>
              </a>
              <div class="flex items-center space-x-4">
