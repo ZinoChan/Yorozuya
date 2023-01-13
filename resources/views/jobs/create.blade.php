@@ -12,7 +12,8 @@
                 <span class="text-sm text-gray-400">post a job and find a developer</span>
             </div>
 
-            <form action="">
+            <form method="POST" action="/jobs">
+                @csrf
                 <div class="mb-6">
                     <label for="company" class="inline-block mb-2 text-gray-600 font-bold text-sm">Company Name</label>
                     <input type="text"

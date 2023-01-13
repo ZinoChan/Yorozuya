@@ -27,4 +27,23 @@ class JobsController extends Controller
     public function create(){
         return view('jobs.create');
     }
+
+    //Store job data
+    public function store(Request $request){
+        $formFields = $request->validate([
+            'company' => 'required|max:100',
+            'position' => 'required|max:150',
+            'location' => 'required|max:100',
+            'website' => 'required|max:200',
+            'contract' => 'required',
+            'description' => 'required',
+            'expertise' => 'required', 
+            'expertiseTags' => 'required',
+            'role' => 'required',
+            'roleTags' => 'required'
+        ]);
+
+        Jobs::create($formFields);
+        return redirect('/');
+    }
 }
