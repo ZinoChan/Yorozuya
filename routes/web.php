@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//All Jobs
 Route::get('/', [JobsController::class, 'index']);
+
+// Create a Job
 Route::get('/jobs/create', [JobsController::class, 'create']);
+
+//Store a Job
 Route::post('/jobs', [JobsController::class, 'store']);
 
+//Show single job
 Route::get('/jobs/{job}', [JobsController::class, 'show']);
+
