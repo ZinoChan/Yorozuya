@@ -11,7 +11,7 @@ class JobsController extends Controller
     public function index()
     {
         return view('jobs.index', [
-            'jobs' => Jobs::latest()->filter(request(['search']))->get()
+            'jobs' => Jobs::latest()->filter(request(['search']))->simplePaginate(3)
         ]);
     }
 
@@ -44,6 +44,6 @@ class JobsController extends Controller
         ]);
 
         Jobs::create($formFields);
-        return redirect('/');
+        return redirect('/')->with('success', 'job created successfully!');
     }
 }

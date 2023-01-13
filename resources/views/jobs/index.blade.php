@@ -14,5 +14,8 @@
         @else
             <p>no jobs found</p>
         @endunless
+        <div class="max-w-xs  mt-10 mx-auto">
+            {{$jobs->links()}}
+        </div>
     </section>
 @endsection
