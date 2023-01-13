@@ -18,7 +18,7 @@
                     <label for="company" class="inline-block mb-2 text-gray-600 font-bold text-sm">Company Name</label>
                     <input type="text"
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="company" />
+                        name="company" value="{{ old('company') }}" />
                     @error('company')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -30,7 +30,7 @@
                     <label for="position" class="inline-block mb-2 text-gray-600 font-bold text-sm">Job Position</label>
                     <input type="text"
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="position" placeholder="Example: Senior Laravel Developer" />
+                        name="position" placeholder="Example: Senior Laravel Developer" value="{{ old('position') }}" />
                     @error('position')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -42,7 +42,7 @@
                     <label for="location" class="inline-block mb-2 text-gray-600 font-bold text-sm">Job Location</label>
                     <input type="text"
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="location" placeholder="Example: Remote, Boston MA, etc" />
+                        name="location" placeholder="Example: Remote, Boston MA, etc" value="{{ old('location') }}" />
                     @error('location')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -63,20 +63,20 @@
                     </label>
                     <input type="text"
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="website" />
+                        name="website" value="{{ old('website') }}" />
                     @error('website')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
                         </p>
                     @enderror
                 </div>
-                 <div class="mb-6">
-                    <label for="website" class="inline-block mb-2 text-gray-600 font-bold text-sm">
+                <div class="mb-6">
+                    <label for="contract" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         contract
                     </label>
                     <select
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="contract" >
+                        name="contract" value="{{ old('contract') }}">
                         <option>full time</option>
                         <option>part time</option>
                     </select>
@@ -101,7 +101,9 @@
                         Job Description
                     </label>
                     <textarea class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="description" rows="6" placeholder="Include tasks, requirements, salary, etc"></textarea>
+                        name="description" rows="6" placeholder="Include tasks, requirements, salary, etc">
+                    {{ old('description') }}
+                    </textarea>
                     @error('description')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -109,11 +111,13 @@
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="description" class="inline-block mb-2 text-gray-600 font-bold text-sm">
+                    <label for="expertise" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         job requirement
                     </label>
                     <textarea class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="expertise" rows="6" placeholder="Include tasks, requirements, salary, etc"></textarea>
+                        name="expertise" rows="6" placeholder="Include tasks, requirements, salary, etc">
+                    {{ old('expertise') }}
+                    </textarea>
                     @error('expertise')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -121,11 +125,13 @@
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="description" class="inline-block mb-2 text-gray-600 font-bold text-sm">
+                    <label for="expertise tags" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         Job requirement list (comma separated)
                     </label>
                     <textarea class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="expertiseTags" rows="6" placeholder="strong communications skills, proficiency in javascript,  etc"></textarea>
+                        name="expertiseTags" rows="6" placeholder="strong communications skills, proficiency in javascript,  etc">
+                    {{ old('expertiseTags') }}
+                    </textarea>
                     @error('expertiseTags')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -133,11 +139,13 @@
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="description" class="inline-block mb-2 text-gray-600 font-bold text-sm">
+                    <label for="role" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         Job role
                     </label>
                     <textarea class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="role" rows="6"></textarea>
+                        name="role" rows="6">
+                    {{ old('role') }}
+                    </textarea>
                     @error('role')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
@@ -145,11 +153,12 @@
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="description" class="inline-block mb-2 text-gray-600 font-bold text-sm">
+                    <label for="roleTags" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         Job role list (comma separated)
                     </label>
                     <textarea class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="roleTags" rows="6" placeholder="strong communications skills, proficiency in javascript,  etc"></textarea>
+                        name="roleTags" rows="6" placeholder="strong communications skills, proficiency in javascript,  etc">
+                    {{ old('roleTags') }}</textarea>
                     @error('roleTags')
                         <p class="text-red-600 mt-1">
                             {{ $message }}
