@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('position');
             $table->string('company');
+            $table->string('logo');
             $table->string('contract');
             $table->string('location');
             $table->string('website');
