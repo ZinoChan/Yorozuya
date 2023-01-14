@@ -53,4 +53,36 @@ class JobsController extends Controller
        
         return redirect('/')->with('success', 'job created successfully!');
     }
+    //Edit job data
+    public function edit(Jobs $job)
+    {
+        return view('jobs.edit', ['job' => $job]);
+    }
+
+    //Update job data
+    public function update(Request $request, Jobs $job)
+    {
+
+        $formFields = $request->validate([
+            'company' => 'required|max:100',
+            'position' => 'required|max:150',
+            'location' => 'required|max:100',
+            'website' => 'required|max:200',
+            'contract' => 'required',
+            'description' => 'required',
+            'expertise' => 'required',
+            'expertiseTags' => 'required',
+            'role' => 'required',
+            'roleTags' => 'required'
+        ]);
+
+        if ($request->hasFile('logo')) {
+
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+
+        $job->update($formFields);
+        return back()->with('success', 'job updated successfully!');
+    }
 }
