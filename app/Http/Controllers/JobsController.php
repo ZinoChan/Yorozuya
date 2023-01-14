@@ -40,10 +40,17 @@ class JobsController extends Controller
             'expertise' => 'required', 
             'expertiseTags' => 'required',
             'role' => 'required',
-            'roleTags' => 'required'
+            'roleTags' => 'required',
+            'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+             
         ]);
 
+        
+        $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        
+
         Jobs::create($formFields);
+       
         return redirect('/')->with('success', 'job created successfully!');
     }
 }
