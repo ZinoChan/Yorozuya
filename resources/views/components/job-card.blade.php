@@ -1,7 +1,10 @@
 @props(['job'])
 <div class="rounded bg-white relative py-10 px-6">
-    <div class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-16 h-16 -top-8 left-6 bg-pink-500">
-        {{$job->company}}
+        @if ($job->logo)
+            <img class="w-12 h-auto" src="{{ asset('storage/' . $job->logo) }}" alt="logo">
+        @else
+            {{ $job->company }}
+        @endif
     </div>
     <div class="mb-6">
         <div class="text-gray-400 capitalize mb-3 flex items-center space-x-3">
