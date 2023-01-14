@@ -24,12 +24,15 @@ class JobsController extends Controller
     }
 
     //create job form
-    public function create(){
+    public function create()
+    {
         return view('jobs.create');
     }
 
     //Store job data
-    public function store(Request $request){
+    public function store(Request $request)
+    {
+
         $formFields = $request->validate([
             'company' => 'required|max:100',
             'position' => 'required|max:150',
@@ -37,7 +40,7 @@ class JobsController extends Controller
             'website' => 'required|max:200',
             'contract' => 'required',
             'description' => 'required',
-            'expertise' => 'required', 
+            'expertise' => 'required',
             'expertiseTags' => 'required',
             'role' => 'required',
             'roleTags' => 'required',
@@ -53,6 +56,8 @@ class JobsController extends Controller
        
         return redirect('/')->with('success', 'job created successfully!');
     }
+
+
     //Edit job data
     public function edit(Jobs $job)
     {
@@ -84,5 +89,12 @@ class JobsController extends Controller
 
         $job->update($formFields);
         return back()->with('success', 'job updated successfully!');
+    }
+
+    //Delete a job
+    public function destroy(Jobs $job)
+    {
+        $job->delete();
+        return redirect('/')->with('success', 'job deleted successfully!');
     }
 }
