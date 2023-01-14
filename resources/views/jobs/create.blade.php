@@ -12,7 +12,7 @@
                 <span class="text-sm text-gray-400">post a job and find a developer</span>
             </div>
 
-            <form method="POST" action="/jobs">
+            <form method="POST" action="/jobs" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-6">
                     <label for="company" class="inline-block mb-2 text-gray-600 font-bold text-sm">Company Name</label>
@@ -80,14 +80,19 @@
                     @enderror
                 </div>
 
-                {{-- <div class="mb-6">
+                <div class="mb-6">
                     <label for="logo" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         Company Logo
                     </label>
                     <input type="file"
                         class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
                         name="logo" />
-                </div> --}}
+                    @error('logo')
+                        <p class="text-red-600 mt-1">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                </div>
 
                 <div class="mb-6">
                     <label for="description" class="inline-block mb-2 text-gray-600 font-bold text-sm">
