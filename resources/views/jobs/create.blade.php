@@ -50,13 +50,6 @@
                     @enderror
                 </div>
 
-                {{-- <div class="mb-6">
-                    <label for="email" class="inline-block mb-2 text-gray-600 font-bold text-sm">Contact Email</label>
-                    <input type="text"
-                        class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
-                        name="email" />
-                </div> --}}
-
                 <div class="mb-6">
                     <label for="website" class="inline-block mb-2 text-gray-600 font-bold text-sm">
                         Website/Application URL
