@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-    <x-company-site :company="$job->company" :website="$job->website" />
+    <x-company-site :company="$job->company" :website="$job->website"  :id="$job->id" />
 
     <div class="rounded-md bg-white max-w-screen-md mx-auto p-10 my-10">
         <div class="flex items-center justify-between mb-6">
