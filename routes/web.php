@@ -23,6 +23,15 @@ Route::get('/jobs/create', [JobsController::class, 'create']);
 //Store a Job
 Route::post('/jobs', [JobsController::class, 'store']);
 
+//Edit a Job
+Route::get('/jobs/{job}/edit', [JobsController::class, 'edit']);
+
+//Update a job
+Route::put('/jobs/{job}', [JobsController::class, 'update']);
+
+//Delete a job
+Route::delete('/jobs/{job}', [JobsController::class, 'destroy']);
+
 //Show single job
 Route::get('/jobs/{job}', [JobsController::class, 'show']);
 
