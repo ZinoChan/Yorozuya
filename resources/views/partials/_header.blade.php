@@ -3,8 +3,9 @@
      <nav class=" py-8">
          <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
              <a href="/" class="flex items-center">
-                 <span class="self-center text-3xl uppercase font-semibold whitespace-nowrap text-white">Yorozuya</span>
+                 <span class="self-center text-2xl uppercase font-bold whitespace-nowrap text-[#f1ee63]">Yorozuya</span>
              </a>
+             <div class="flex items-center space-x-8">
              <div class="flex items-center space-x-4">
                  <span class="text-white text-lg"><i class="fa-regular fa-sun"></i></span>
                  <label class="relative inline-flex items-center cursor-pointer">
