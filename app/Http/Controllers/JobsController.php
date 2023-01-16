@@ -44,16 +44,16 @@ class JobsController extends Controller
             'expertiseTags' => 'required',
             'role' => 'required',
             'roleTags' => 'required',
-            'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-             
+            'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
 
-        
+
         $formFields['logo'] = $request->file('logo')->store('logos', 'public');
-        
+
+        $formFields['user_id'] = auth()->id();
 
         Jobs::create($formFields);
-       
+
         return redirect('/')->with('success', 'job created successfully!');
     }
 
@@ -67,6 +67,9 @@ class JobsController extends Controller
     //Update job data
     public function update(Request $request, Jobs $job)
     {
+        if ($job->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
 
         $formFields = $request->validate([
             'company' => 'required|max:100',
@@ -94,6 +97,9 @@ class JobsController extends Controller
     //Delete a job
     public function destroy(Jobs $job)
     {
+        if ($job->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
         $job->delete();
         return redirect('/')->with('success', 'job deleted successfully!');
     }
