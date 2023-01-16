@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Models\Jobs;
 use Illuminate\Support\Facades\Route;
@@ -51,3 +52,8 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 //Login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+// Profile
+// Manage jobs
+Route::get('/profile/jobs', [ProfileController::class, 'manage'])->middleware('auth');
+
