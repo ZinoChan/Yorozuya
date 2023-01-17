@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <section class="pb-20">
-        <div class="max-w-2xl p-10 mx-auto rounded-md bg-white relative -mt-12">
+        <div class="max-w-xl p-10 mx-auto rounded-md bg-white dark:bg-gray-800 relative -mt-12">
             <div class="mb-8 text-center">
                 <h2 class="text-4xl text-indigo-500 font-bold uppercase mb-1">
                     Login
@@ -15,9 +15,9 @@
                 @csrf
 
                 <div class="mb-6">
-                    <label for="email" class="inline-block mb-2 text-gray-600 font-bold text-sm">email</label>
+                    <label for="email" class="inline-block mb-2 text-gray-600 dark:text-gray-200 font-bold text-sm">email</label>
                     <input type="email"
-                        class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
+                        class="border border-gray-200 dark:border-gray-700 bg-transparent dark:text-white focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
                         name="email" value="{{ old('email') }}" />
                     @error('email')
                         <p class="text-red-600 mt-1">
@@ -26,9 +26,9 @@
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="inline-block mb-2 text-gray-600 font-bold text-sm">password</label>
+                    <label for="password" class="inline-block mb-2 text-gray-600 dark:text-gray-200 font-bold text-sm">password</label>
                     <input type="password"
-                        class="border border-gray-200 focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
+                        class="border border-gray-200 dark:border-gray-700 bg-transparent dark:text-white focus:outline-none focus:border-indigo-400 rounded p-2 w-full text-gray-900"
                         name="password" />
                     @error('password')
                         <p class="text-red-600 mt-1">

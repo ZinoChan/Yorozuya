@@ -7,7 +7,7 @@
 
 <ul>
     @foreach ($list as $l)
-        <li class="text-gray-500 list-inside mb-2 list-disc">
+        <li class="text-gray-500 dark:text-gray-300 list-inside mb-2 list-disc">
             {{ $l }}
         </li>
     @endforeach
