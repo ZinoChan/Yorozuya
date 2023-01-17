@@ -19,16 +19,16 @@
         <title>Yorozuya | Dev</title>
     </head>
 
-    <body style="font-family: 'Kumbh Sans', sans-serif;" class="bg-[#f2f2f2]">
-      @include('partials._header') 
+    <body x-data="{ darkMode: localStorage.getItem('dark') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('dark', val))" x-bind:class="{ 'dark': darkMode }">
+        @include('partials._header')
         <main class="max-w-screen-xl px-4 md:px-6 mx-auto">
 
             @yield('content')
         </main>
-        
+
 
         {{-- toast --}}
-        <x-toast/>
+        <x-toast />
     </body>
 
     </html>
