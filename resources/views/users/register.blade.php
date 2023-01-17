@@ -7,7 +7,9 @@
                 <h2 class="text-4xl text-indigo-500 font-bold uppercase mb-1">
                     Register
                 </h2>
-                <span class="text-sm text-gray-400">sign up and start posting jobs</span>
+                <p class="mt-4 capitalize text-gray-500 dark:text-gray-200">
+                    have an account ? <a href="/login" class="text-red-600 hover:underline dark:text-red-500">Login</a>
+                </p>
             </div>
 
             <form method="POST" action="/users">

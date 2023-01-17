@@ -6,6 +6,9 @@
                 <h2 class="text-4xl text-indigo-500 font-bold uppercase mb-1">
                     Login
                 </h2>
+                  <p class="mt-4 capitalize text-gray-500 dark:text-gray-200">
+                    new user ? <a href="/register" class="text-red-600 hover:underline dark:text-red-500">sign up</a>
+                </p>
             </div>
 
             <form method="POST" action="/users/authenticate">
