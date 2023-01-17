@@ -4,7 +4,11 @@
 
     <div class="bg-pink-400 rounded-l-md h-40 w-40 p-4 flex items-center justify-center">
         <span class="capitalize text-white font-bold text-4xl">
-            logo
+            @if ($logo)
+            <img class="w-12 h-auto" src="{{ asset('storage/' . $logo) }}" alt="logo">
+        @else
+            {{ $company }}
+        @endif
         </span>
     </div>
     <div class="p-8 w-full flex  items-center justify-between">
