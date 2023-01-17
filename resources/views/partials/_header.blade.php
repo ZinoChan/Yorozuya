@@ -1,6 +1,6 @@
 <header class="bg-cover bg-[0_100%] bg-no-repeat"
     style="background-image: url(/images/bg-pattern-header.svg); min-height: 162px">
-    <nav class=" py-8">
+    <nav class=" max-w-screen-xl mx-auto py-8">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
             <a href="/" class="flex items-center">
                 <span class="self-center text-2xl uppercase font-bold whitespace-nowrap text-[#f1ee63]">Yorozuya</span>

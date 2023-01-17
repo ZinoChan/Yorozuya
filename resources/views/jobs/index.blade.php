@@ -2,7 +2,7 @@
 @section('content')
 
     @include('partials._search')
-    <section class="py-20">
+    <section class="py-20 max-w-screen-lg mx-auto">
         @unless(count($jobs) == 0)
             <div class="grid grid-cols-3 gap-12">
                 @foreach ($jobs as $job)
