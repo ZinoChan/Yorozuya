@@ -1,13 +1,10 @@
 {
     "version": 2,
+    "functions": {
+      "api/index.php": { "runtime": "vercel-php@0.3.1" }
+    },
+
     "builds": [
-      {
-        "src": "public/index.php",
-        "use": "@vercel/php",
-        "config": {
-          "maxLambdaSize": "2048"
-        }
-      },
       {
         "src": "resources/js/app.js",
         "use": "@vercel/static-build",
@@ -15,8 +12,17 @@
           "distDir": "public/build",
           "buildCommand": "npm run production"
         }
+      },
+      {
+        "src": "resources/css/app.css",
+        "use": "@npm/tailwindcss",
+        "config": {
+          "input": "resources/css/app.css",
+          "output": "public/build/app.css"
+        }
       }
     ],
+
     "routes": [
       {
         "src": "/(.*)",
@@ -24,3 +30,4 @@
       }
     ]
   }
+
