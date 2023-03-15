@@ -18,7 +18,7 @@
       },
       {
         "src": "resources/css/app.css",
-        "use": "@npm/tailwindcss",
+        "use": "vite",
         "config": {
           "input": "resources/css/app.css",
           "output": "public/build/app.css"
