@@ -1,15 +1,6 @@
 {
     "version": 2,
     "functions": {
-        "api/tailwindcss.php": {
-            "runtime": "vercel-php@0.4.0",
-            "includeFiles": [
-                "public/css/index.css",
-                "public/js/app.js"
-              ],
-            "entrypoint": "public/css/index.css",
-            "command": "vite build"
-          },
         "api/index.php": { "runtime": "vercel-php@0.4.0" }
     },
     "routes": [{
