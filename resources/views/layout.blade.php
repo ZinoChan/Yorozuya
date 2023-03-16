@@ -16,6 +16,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
         @vite('resources/js/app.js')
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                content: [
+                    "./resources/**/*.blade.php",
+                    "./resources/**/*.js",
+                    "./resources/**/*.vue",
+                ],
+                theme: {
+                    extend: {
+                        colors: {
+                            yellow1: "#f1ee63",
+                        },
+                    },
+                },
+                plugins: [],
+            };
+        </script>
 
         <title>Yorozuya | Dev</title>
     </head>
