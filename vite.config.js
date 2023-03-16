@@ -9,6 +9,6 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: 'public/vendor/courier/build'
+        outDir: 'public/build'
     }
 });
