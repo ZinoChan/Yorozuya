@@ -11,6 +11,6 @@ export default defineConfig({
     ],
     build: {
         publicPath: '/public/build/',
-        outDir: '/public/build'
+        outDir: 'public/build'
     }
 });
