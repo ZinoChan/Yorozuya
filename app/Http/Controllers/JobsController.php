@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jobs;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 
 class JobsController extends Controller
@@ -48,8 +49,8 @@ class JobsController extends Controller
         ]);
 
 
-        $formFields['logo'] = $request->file('logo')->store('logos', 'public');
-
+        $uploadedFileUrl = Cloudinary::upload($request->file('logo')->getRealPath(), ['folder' => 'Yorozuya'])->getSecurePath();
+        $formFields['logo'] = $uploadedFileUrl;
         $formFields['user_id'] = auth()->id();
 
         Jobs::create($formFields);
