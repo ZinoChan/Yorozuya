@@ -41,7 +41,7 @@
     </head>
 
     <body style="font-family: 'Kumbh Sans', sans-serif;" x-data="{ darkMode: localStorage.getItem('dark') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
-        x-bind:class="{ 'dark dark:bg-[#111827]': darkMode }" class="bg-light1">
+        x-bind:class="{ 'dark bg-[#111827]': darkMode }" class="bg-light1">
 
         @include('partials._header')
 

@@ -1,5 +1,5 @@
 <header class="bg-cover bg-[0_100%] bg-no-repeat"
-    style="background-image: url(/images/bg-pattern-header.svg); min-height: 162px">
+    style="background-image: url(https://res.cloudinary.com/dpfsdplv2/image/upload/v1679102508/bg-pattern-header_qpk7ap.svg); min-height: 162px">
     <nav class=" max-w-screen-xl mx-auto py-8">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
             <a href="/" class="flex items-center">
