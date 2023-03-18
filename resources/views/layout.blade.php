@@ -41,15 +41,15 @@
     </head>
 
     <body style="font-family: 'Kumbh Sans', sans-serif;" x-data="{ darkMode: localStorage.getItem('dark') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
-        x-bind:class="{ 'dark': darkMode }" class="bg-light1 dark:bg-[#111827]">
-        <div class="bg-light1 dark:bg-[#111827]">
-            @include('partials._header')
+        x-bind:class="{ 'dark dark:bg-[#111827]': darkMode }" class="bg-light1">
 
-            <main class="max-w-screen-xl px-4 md:px-6 mx-auto">
+        @include('partials._header')
 
-                @yield('content')
-            </main>
-        </div>
+        <main class="max-w-screen-xl px-4 md:px-6 mx-auto">
+
+            @yield('content')
+        </main>
+
 
         {{-- toast --}}
         <x-toast />
