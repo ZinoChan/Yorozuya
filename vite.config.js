@@ -10,7 +10,7 @@ export default defineConfig({
         }),
     ],
     build: {
-        publicPath: '/public/build/',
-        outDir: 'public/build'
+        publicPath: '/api/dist/',
+        outDir: 'api/dist'
     }
 });
