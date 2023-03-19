@@ -56,7 +56,3 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 // Profile
 // Manage jobs
 Route::get('/profile/jobs', [ProfileController::class, 'manage'])->middleware('auth');
-
-Route::get('/app.js', function () {
-    return response(file_get_contents(__DIR__ . '/../api/dist/app.js'))->header('Content-Type', 'application/javascript');
-});
