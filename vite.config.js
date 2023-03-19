@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    base: './',
+    base: 'https://yorozuya-devs.vercel.app',
     plugins: [
         laravel({
             input: ['resources/js/app.js'],
