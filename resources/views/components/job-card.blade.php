@@ -1,10 +1,11 @@
 @props(['job'])
 
-<div class="rounded bg-white relative py-6 px-4 block max-w-sm p-6  border border-gray-100 shadow-md hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+<div
+    class="rounded bg-white relative py-6 px-4 block max-w-sm p-6  border border-gray-100 shadow-md hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
     <div
         class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-10 h-10 -top-5 left-6 bg-yellow1">
         @if ($job->logo)
-            <img class="w-6 h-auto" src="{{ asset('storage/' . $job->logo) }}" alt="logo">
+            <img class="w-6 h-auto" src="{{ $job->logo }}" alt="logo">
         @else
             {{ $job->company }}
         @endif
