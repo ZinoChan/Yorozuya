@@ -1,9 +1,12 @@
 @props(['job'])
-
+@php
+    $colors = ['hsl(36, 87%, 49%)', 'hsl(12, 79%, 52%)', 'hsl(235, 10%, 23%)', 'hsl(227, 62%, 48%)', 'hsl(216, 46%, 14%)', 'hsl(295, 55%, 21%)', 'hsl(254, 71%, 45%)', 'hsl(218, 58%, 31%)', 'hsl(29, 60%, 87%)'];
+    $randomColor = $colors[array_rand($colors)];
+@endphp
 <div
-    class="rounded bg-white relative py-6 px-4 block max-w-sm p-6  border border-gray-100 shadow-md hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-    <div
-        class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-10 h-10 -top-5 left-6 bg-yellow1">
+    class="rounded w-full bg-white relative pt-14 px-8 pb-8 block md:max-w-sm p-6 min-w-full  border border-gray-100 shadow-md hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div class="absolute flex items-center justify-center text-sm font-bold text-white p-1 rounded-lg w-12 h-12 -top-8 left-6"
+        style="background-color:  {{ $randomColor }}">
         @if ($job->logo)
             <img class="w-6 h-auto" src="{{ $job->logo }}" alt="logo">
         @else
