@@ -36,6 +36,22 @@
                 plugins: [],
             };
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            @media screen and (max-width: 767px) {
+                header {
+                    background-image: url("https://res.cloudinary.com/dpfsdplv2/image/upload/v1680260226/bg-pattern-header_aq9dmy.svg");
+                    min-height: 136px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                header {
+                    background-image: url("https://res.cloudinary.com/dpfsdplv2/image/upload/v1679102508/bg-pattern-header_qpk7ap.svg");
+                    min-height: 162px;
+                }
+            }
+        </style>
 
         <title>Yorozuya | Dev</title>
     </head>
